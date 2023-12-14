@@ -4,51 +4,51 @@ import dbConnect from '../config/mongo'; // Importa la configuración de la cone
 import { handleHtttp } from '../utils/error.handle'; // Importa una función para manejar errores HTTP
 
 // Función para obtener un elemento por ID
-const getItem = (req: Request, res: Response) => {
+const getBlog = (req: Request, res: Response) => {
     try {
     } catch (e) {
         // En caso de error, utiliza la función handleHtttp para manejar la respuesta HTTP
-        handleHtttp(res, 'ERROR_GET_ITEM');
+        handleHtttp(res, 'ERROR_GET_BLOG');
     }
 };
 
 // Función para obtener varios elementos
-const getItems = (req: Request, res: Response) => {
+const getBlogs = (req: Request, res: Response) => {
     try {
     } catch (e) {
         // En caso de error, utiliza la función handleHtttp para manejar la respuesta HTTP
-        handleHtttp(res, 'ERROR_GET_ITEMS');
+        handleHtttp(res, 'ERROR_GET_BLOGS');
     }
 };
 
 // Función para actualizar un elemento por ID
-const updateItem = (req: Request, res: Response) => {
+const updateBlog = (req: Request, res: Response) => {
     try {
     } catch (e) {
         // En caso de error, utiliza la función handleHtttp para manejar la respuesta HTTP
-        handleHtttp(res, 'ERROR_UPDATE_ITEM');
+        handleHtttp(res, 'ERROR_UPDATE_BLOG');
     }
 };
 
 // Función para crear un nuevo elemento
-const postItem = ({ body }: Request, res: Response) => {
+const postBlog = ({ body }: Request, res: Response) => {
     try {
         // En este caso, simplemente respondes con el cuerpo de la solicitud como ejemplo
         res.send(body);
     } catch (e) {
         // En caso de error, utiliza la función handleHtttp para manejar la respuesta HTTP
-        handleHtttp(res, 'ERROR_POST_ITEM');
+        handleHtttp(res, 'ERROR_POST_BLOG');
     }
 };
 
 // Función para eliminar un elemento por ID
-const deleteItem = (req: Request, res: Response) => {
+const deleteBlog= (req: Request, res: Response) => {
     try {
     } catch (e) {
         // En caso de error, utiliza la función handleHtttp para manejar la respuesta HTTP
-        handleHtttp(res, 'ERROR_DELETE_ITEM');
+        handleHtttp(res, 'ERROR_DELETE_BLOG');
     }
 };
 
 // Exporta todas las funciones como parte del módulo
-export { getItem, getItems, updateItem, postItem, deleteItem };
+export { getBlog, getBlogs, updateBlog, postBlog, deleteBlog };
