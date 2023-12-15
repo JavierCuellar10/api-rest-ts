@@ -5,21 +5,34 @@ import { Car } from "../interfaces/car.interface";
 const ItemSchema = new Schema<Car>(
     //Se crean dos objetos
     {
-        color: {
+        //datos importados de Car
+        name: {
             type: String,
+            //validación
+            required: true,
+        },
+        color: {
+            
+            type: String,
+            //validación
+            required: true,
         },
         gas: {
             type: String,
             enum: ["gasoline", "electric"],
+            required: true,
         },
         year:{
             type: Number,
+            required: true,
         },
         description: {
-            type: String
+            type: String,
+            required: true,
         },
         price: {
             type : Number,
+            required: true,
         },
 
     },
@@ -32,5 +45,6 @@ const ItemSchema = new Schema<Car>(
 );
 
 //vamos a implementar ItemSchema en itemModel 
+//model recibe string osea el nombre y el esquema
 const ItemModel = model('items', ItemSchema);
 export default ItemModel;

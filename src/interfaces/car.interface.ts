@@ -1,5 +1,6 @@
 // Define la interfaz Car que describe la estructura de un objeto Car
 export interface Car {
+    name: string;
     // Propiedad que representa el color del automóvil (cadena de texto)
     color: string;
 
